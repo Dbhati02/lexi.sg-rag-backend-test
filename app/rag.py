@@ -5,7 +5,8 @@ import chromadb
 from typing import List, Dict
 
 # Load embedder
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
+embedder = SentenceTransformer("paraphrase-MiniLM-L3-v2")
+
 
 # ✅ Updated Persistent ChromaDB Client
 client = chromadb.PersistentClient(path="./chroma_db")
