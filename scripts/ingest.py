@@ -37,7 +37,8 @@ def load_texts(doc_dir="docs"):
 
 def chunk_and_index(texts, collection):
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-    embedder = SentenceTransformer('all-MiniLM-L6-v2')
+    embedder = SentenceTransformer("paraphrase-MiniLM-L3-v2")
+
 
     for fname, text in texts:
         chunks = splitter.split_text(text)
